@@ -84,14 +84,14 @@ function showPosition(position) {
 function currentLoc_weather(lat1,lon1){
     let req = new XMLHttpRequest();
 
-    req.open("GET",`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=dl7nZtPGilGL8AWQy2l0CAViTbh0AJPu&q=${lat1},${lon1}`);
+    req.open("GET",`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=dl7nZtPGilGL8AWQy2l0CAViTbh0AJPu&q=${lat1},${lon1}`);
     req.send();
 
     req.onload = function(){
         var data = JSON.parse(req.response);
         let city = data.LocalizedName;
         var req2 = new XMLHttpRequest();
-        req2.open("GET",`http://api.weatherapi.com/v1/current.json?key=dd744413e3d6405a852123256221701&q=${city}&aqi=yes`);
+        req2.open("GET",`https://api.weatherapi.com/v1/current.json?key=dd744413e3d6405a852123256221701&q=${city}&aqi=yes`);
         req2.send();
         req2.onload = function(){
             let new_data = JSON.parse(req2.response);
@@ -105,7 +105,7 @@ function currentLoc_weather(lat1,lon1){
 function city_weather(city){
     let req = new XMLHttpRequest();
 
-    req.open("GET",`http://api.weatherapi.com/v1/current.json?key=dd744413e3d6405a852123256221701&q=${city}&aqi=yes`);
+    req.open("GET",`https://api.weatherapi.com/v1/current.json?key=dd744413e3d6405a852123256221701&q=${city}&aqi=yes`);
     req.send();
 
     req.onload= function()
