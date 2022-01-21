@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="video-container">
+            <video id="video" autoplay muted loop>
+                <source id="vid" src="img/Sunny-day.mp4" type="video/mp4">
+            </video>
+        </div>
+    
+
+        <div id="findbar">
+            <img src="img/location_on_black_24dp.svg" alt="">
+            <span id="location_name">Your City</span> <sub><img id="dropbtn" src="img/expand_more_black_24dp.svg" alt=""></sub>
+            <br>
+        </div>
+        <div id="list">
+            <input type="text" id="search" placeholder="search by city"><sub><img id="clk-srch" src="img/search_black_24dp.svg" alt=""></sub><br>
+            <span id="current_loc"><sub> <img src="img/my_location_black_24dp.svg" alt="" srcset=""></sub> Current Location</span>
+        </div>
+            <h1 id="temp"></h1>
+            <p id="weather"></p>
+         
+        <div id="more_details">
+            <table>
+                <tr>
+                    <td>wind:</td>
+                    <td>visibility:</td>
+                    <td>humidity:</td>
+                </tr>
+                <tr>
+                    <td id="wind"></td>
+                    <td id="visi"></td>
+                    <td id="humi"></td>
+                </tr>
+               
+            </table>
+            </div>
+
+    
+    </div>
+
+        <script src="main.js"></script>
+</body>
+
+</html>
