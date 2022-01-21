@@ -139,10 +139,11 @@ function showData(data){
 
     if(weatherText.includes('snow'))
     weatherText = "Snowfall";
-    if(weatherText.includes('heavy rain'))
-    weatherText = "Rain";
 
-    if(weatherText == "Rain" || weatherText == "Snowfall" && time == "night")
+    if(weatherText.includes('rain'))
+    weatherText = "Light rain showers";
+
+    if(weatherText == "Light rain showers" || weatherText == "Snowfall" && time == "night")
     document.body.style.color="#ffffffb8";
 
     vid.src="img/"+weatherText+"-"+time+".mp4";
