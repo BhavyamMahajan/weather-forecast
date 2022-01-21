@@ -137,8 +137,13 @@ function showData(data){
     else
     time = "night";
 
-    if(weatherText == "Rain" && time == "night")
-    document.body().style.color="#ffffffb8";
+    if(weatherText.includes('snow'))
+    weatherText = "Snowfall";
+    if(weatherText.includes('heavy rain'))
+    weatherText = "Rain";
+
+    if(weatherText == "Rain" || weatherText == "Snowfall" && time == "night")
+    document.body.style.color="#ffffffb8";
 
     vid.src="img/"+weatherText+"-"+time+".mp4";
     video.load();
