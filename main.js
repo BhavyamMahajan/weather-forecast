@@ -112,7 +112,7 @@ function city_weather(city){
     {
         var data = JSON.parse(req.response);
         showData(data);
-        console.log(data);
+        // console.log(data);
     }
 }
 
@@ -126,11 +126,16 @@ function showData(data){
 
     temp.innerHTML = Math.round(data.current.temp_c)+"&#8451;";
 
-    let time = data.location.localtime.slice(11,13);
-    if(time>=1 && time<=6 || time>=19 && time <=24) 
-        time = "night";
+    // let time = data.location.localtime.slice(11,13);
+    // if(time>=0 && time<=6 || time>=19 && time <=24) 
+    //     time = "night";
+    // else
+    //     time = "day";
+    let time;
+    if(data.current.is_day)
+    time = "day";
     else
-        time = "day";
+    time = "night";
 
     if(weatherText == "Rain" && time == "night")
     document.body().style.color="#ffffffb8";
