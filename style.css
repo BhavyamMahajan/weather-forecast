@@ -80,7 +80,7 @@ h1{
     cursor: pointer;
 }
 #more_details{
-    position: fixed;
+    position: absolute;
     bottom: 80px;
     left: 20px;
     border: 2px solid black;
