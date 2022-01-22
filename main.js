@@ -145,6 +145,8 @@ function showData(data){
 
     if(weatherText == "Light rain showers" || weatherText == "Snowfall" && time == "night")
     document.body.style.color="#ffffffb8";
+    else
+    document.body.style.color="black";
 
     vid.src="img/"+weatherText+"-"+time+".mp4";
     video.load();
