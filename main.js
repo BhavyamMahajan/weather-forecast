@@ -143,7 +143,9 @@ function showData(data){
     if(weatherText.includes('rain'))
     weatherText = "Light rain showers";
 
-    if(time == "night" && weatherText == "Light rain showers" || weatherText == "Snowfall" )
+    if(time == "night" && weatherText == "Light rain showers") 
+    document.body.style.color="#ffffffb8";
+    else if(time=='night' && weatherText == "Snowfall" )
     document.body.style.color="#ffffffb8";
     else
     document.body.style.color="black";
