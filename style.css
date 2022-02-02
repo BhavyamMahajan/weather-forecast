@@ -95,7 +95,11 @@ td {
     padding: 9px 20px;
     font-size: 20px;
 }
-
+@media screen and (max-width:370px){
+    #more_details{
+        left:2%;
+    }
+}
 @media screen and (min-width:900px){
     .wrapper{
         width:40%;
@@ -105,8 +109,7 @@ td {
         box-shadow: 0 0 20px 3px black;
     }
     #more_details{
-        display:flex;
-        position:absolute;
+        margin: 0 110px;
     }
     .video-container{
         border-radius:20px;
