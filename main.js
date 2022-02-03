@@ -126,11 +126,7 @@ function showData(data){
 
     temp.innerHTML = Math.round(data.current.temp_c)+"&#8451;";
 
-    // let time = data.location.localtime.slice(11,13);
-    // if(time>=0 && time<=6 || time>=19 && time <=24) 
-    //     time = "night";
-    // else
-    //     time = "day";
+    
     let time;
     if(data.current.is_day)
     time = "day";
@@ -139,6 +135,8 @@ function showData(data){
 
     if(weatherText.includes('snow'))
     weatherText = "Snowfall";
+    if(weatherText.includes('drizzle'))
+    weatherText = 'Light rain showers';
 
     if(weatherText.includes('rain'))
     weatherText = "Light rain showers";
